@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="header-menu">
+            <ul class="header-menu-list">
+                <li class="header-menu-item">
+                    <a href="./index.html" class="header-menu-link">Home</a>
+                </li>
+                <li class="header-menu-item">
+                    <a href="./news.html" class="header-menu-link">News</a>
+                </li>
+                <li class="header-menu-item">
+                    <a href="./profile.html" class="header-menu-link">Profile</a>
+                </li>
+                <li class="header-menu-item">
+                    <a href="./create.html" class="header-menu-link active">Create</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="header-actions">
+            <button class="header-signup-button button" id="signupBtn">
+                Sign Up
+            </button>
+            <button class="header-login-button button" id="loginBtn">
+                Log in
+            </button>
+        </div>
+        <div id="signupModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2 class="hello-text">Hello, Friend!</h2>
+                <p class="child-text">Please enter your personal details</p>
+                <form action="/signup" class="form-container">
+                    <div class="input-group">
+                        <label for="username" class="label-for">Username</label>
+                        <input type="text" id="username" name="username" required class="input-form" placeholder="wildtiger">
+                    </div>
+                    <div class="input-group">
+                        <label for="email" class="label-for">Email</label>
+                        <input type="email" id="email" name="email" required class="input-form" placeholder="lalala@mail.ru">
+                    </div>
+                    <div class="input-group">
+                        <label for="password" class="label-for">Password</label>
+                        <input type="password" id="password" name="password" required class="input-form" placeholder="***********">
+                    </div>
+                    <div class="input-group">
+                        <label for="confirm_password" class="label-for">Confirm Password</label>
+                        <input type="password" id="confirm_password" name="confirm_password" required class="input-form" placeholder="***********">
+                    </div>
+                    <button type="submit" class="submit-button">Sign Up</button>
+                </form>
+            </div>
+        </div>
+    
+        <div id="loginModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2 class="hello-text">Welcome Back!</h2>
+                <p class="child-text">To keep connected with us, please login with your personal info.</p>
+                <form action="/login" class="form-container">
+                    <div class="input-group2">
+                        <label for="login-email" class="label-for">Email</label>
+                        <input type="email" id="login-email" name="email" required class="input-form" placeholder="lalala@mail.ru"><br>
+                    </div>
+                    <div class="input-group2">
+                        <label for="login-password" class="label-for">Password</label>
+                        <input type="password" id="login-password" name="password" required class="input-form" placeholder="**********"><br>
+                    </div>
+                    <button type="submit" class="submit-button">Log In</button>
+                </form>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <h1 class="create-article">Create a blog post</h1>
+            <form action="#" method="post" enctype="multipart/form-data">
+              <div class="form-group">
+                <label for="article">Article</label>
+                <input type="text" id="article" name="article" required>
+              </div>
+              <div class="form-group">
+                <label for="description">Description</label>
+                <textarea id="description" name="description" required></textarea>
+              </div>
+              <div class="form-group">
+                <label for="tags">Tags</label>
+                <input type="text" id="tags" name="tags" required>
+              </div>
+              <div class="form-group">
+                <label for="image">Upload Image</label>
+                <input type="file" id="image" name="image" required>
+              </div>
+              <div class="form-group">
+                <input type="submit" value="Send" class="btn">
+              </div>
+            </form>
+        </div>
+
+        <div class="container">
+            <h1 class="create-article">Create a tag</h1>
+            <form action="#" method="post" enctype="multipart/form-data">
+              <div class="form-group">
+                <label for="article">Article</label>
+                <input type="text" id="article" name="article" required>
+              </div>
+              <div class="form-group">
+                <label for="url">URL</label>
+                <input type="text" id="url" name="url" required>
+              </div>
+              <div class="form-group">
+                <label for="description">Description</label>
+                <textarea id="description" name="description" required></textarea>
+              </div>
+              <div class="form-group">
+                <input type="submit" value="Send" class="btn">
+              </div>
+            </form>
+        </div>
+    </main>
+    <footer class="footer2">
+        <nav class="footer-menu">
+            <ul class="footer-menu-list">
+                <li class="footer-menu-item">
+                    <div class="main-text">Find us</div>
+                    <div class="little-text">AITU, Prospect Mangilik Yel 52, Esil rayon, Astana</div>
+                </li>
+                <div class="footer-center">
+                    <li class="footer-menu-item">
+                        <div class="main-text">Call us</div>
+                        <div class="little-text">+7 (701) 958 22 15</div>
+                    </li>
+                </div>
+                <li class="footer-menu-item">
+                    <div class="main-text">Mail us</div>
+                    <a class="little-text" href="mailto:konst55a@gmail.com">konst55a@gmail.com</a>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+    <script src="js/app.js"></script>
+</body>
+</html>

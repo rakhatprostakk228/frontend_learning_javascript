@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="header-menu">
+            <ul class="header-menu-list">
+                <li class="header-menu-item">
+                    <a href="./index.html" class="header-menu-link">Home</a>
+                </li>
+                <li class="header-menu-item">
+                    <a href="./news.html" class="header-menu-link active">News</a>
+                </li>
+                <li class="header-menu-item">
+                    <a href="./profile.html" class="header-menu-link">Profile</a>
+                </li>
+                <li class="header-menu-item">
+                    <a href="./create.html" class="header-menu-link">Create</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="header-actions">
+            <button class="header-signup-button button" id="signupBtn">
+                Sign Up
+            </button>
+            <button class="header-login-button button" id="loginBtn">
+                Log in
+            </button>
+        </div>
+        <div id="signupModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2 class="hello-text">Hello, Friend!</h2>
+                <p class="child-text">Please enter your personal details</p>
+                <form action="/signup" class="form-container">
+                    <div class="input-group">
+                        <label for="username" class="label-for">Username</label>
+                        <input type="text" id="username" name="username" required class="input-form" placeholder="wildtiger">
+                    </div>
+                    <div class="input-group">
+                        <label for="email" class="label-for">Email</label>
+                        <input type="email" id="email" name="email" required class="input-form" placeholder="lalala@mail.ru">
+                    </div>
+                    <div class="input-group">
+                        <label for="password" class="label-for">Password</label>
+                        <input type="password" id="password" name="password" required class="input-form" placeholder="***********">
+                    </div>
+                    <div class="input-group">
+                        <label for="confirm_password" class="label-for">Confirm Password</label>
+                        <input type="password" id="confirm_password" name="confirm_password" required class="input-form" placeholder="***********">
+                    </div>
+                    <button type="submit" class="submit-button">Sign Up</button>
+                </form>
+            </div>
+        </div>
+    
+        <div id="loginModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2 class="hello-text">Welcome Back!</h2>
+                <p class="child-text">To keep connected with us, please login with your personal info.</p>
+                <form action="/login" class="form-container">
+                    <div class="input-group2">
+                        <label for="login-email" class="label-for">Email</label>
+                        <input type="email" id="login-email" name="email" required class="input-form" placeholder="lalala@mail.ru"><br>
+                    </div>
+                    <div class="input-group2">
+                        <label for="login-password" class="label-for">Password</label>
+                        <input type="password" id="login-password" name="password" required class="input-form" placeholder="**********"><br>
+                    </div>
+                    <button type="submit" class="submit-button">Log In</button>
+                </form>
+            </div>
+        </div>
+    </header>
+    <main class="news-page">
+        <div class="news-container">
+            <div class="news-post2">
+                <img src="./images/dom.png" alt="nichego vashnogo" class="news-post-image2">
+                <h1 class="news-post-title2">Hello World!</h1>
+                <p class="news-post-info2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita eius sapiente tempore modi, in mollitia commodi quasi autem exercitationem velit esse laborum molestias. Distinctio similique neque eum excepturi, tempora cum.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo blanditiis officiis unde voluptatum adipisci facere at autem sequi minus nesciunt! Laboriosam, dolor eum! Aspernatur deserunt illum sit totam necessitatibus molestias.</p>
+                <div class="news-post-meta2">
+                    <span class="news-post-author">By Admin</span>
+                    <div class="buttons">
+                        <button>
+                            <img src="./icons/icons8-нравится-50.png" alt="like" class="like" width="30px"> <!-- добавите onclick чтобы лайкало -->
+                        </button>
+                        <button>
+                            <img src="./icons/icons8-закладка-лента.svg" alt="sohr" class="sohr" width="30px"> <!-- добавите onlick чтобы сохраняло -->
+                        </button>
+                    </div>
+                    <span class="news-post-comments">42 comments</span>
+                </div>
+            </div>
+        </div>
+        <div class="comments-container">
+            <h1 class="comments-title">Comments</h1>
+            <div class="write-comment">
+                <ul class="comment-section">
+                    <li class="comment user-comment">
+                        <div class="info">
+                            <a class="avatar" href="#">
+                                <img src="./images/chel.png" width="35" alt="Profile Avatar" title="Анна Серебрякова" />
+                            </a>
+                            <a href="#">Rakhat Rakhatov</a>
+                            <span>4 hours ago</span>
+                        </div>
+                        <p>Suspendisse gravida sem?</p>
+                    </li>
+
+                    <li class="comment author-comment">
+                        <div class="info">
+                            <a class="avatar" href="#">
+                                <img src="./images/chel.png" width="35" alt="Profile Avatar" title="Евгений Смирнов" />
+                            </a>
+                            <a href="#">Misha Mishov</a>
+                            <span>3 hours ago</span>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse gravida sem sit amet molestie portitor.</p>
+                    </li>
+
+                    <li class="write-new">
+                        <form action="#" method="post">
+                            <textarea placeholder="Your comment" name="comment"></textarea>
+                            <div>
+                                <img src="./images/chel.png" width="35" alt="Profile of Bradley Jones" title="Борис Иванов" />
+                                <button type="submit">Send</button>
+                            </div>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <script src="js/app.js"></script>
+</body>
+</html>
